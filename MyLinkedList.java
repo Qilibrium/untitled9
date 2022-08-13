@@ -98,13 +98,5 @@ public class MyLinkedList {
         }
         return curr.value;
     }
-
-    public void print() {
-        Node temp = head;
-        while (temp != null) {
-            System.out.println(temp.value);
-            temp = temp.next;
-        }
-    }
 }
 
