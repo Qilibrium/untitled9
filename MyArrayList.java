@@ -43,10 +43,4 @@ public class MyArrayList {
     public Object get(int index) {
         return array[index];
     }
-
-    public void display() {
-        for (Object elem : array) {
-            System.out.print(elem + " ");
-        }
-    }
 }
