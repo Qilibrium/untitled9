@@ -90,19 +90,8 @@ public class MyQueue {
             throw new ArrayIndexOutOfBoundsException("Index greater than length");
         }
     }
-
-    public void print() {
-        Node curNode = head;
-
-        if (head != null) {
-            System.out.println(head.value);
-        }
-        while (curNode.next != null) {
-            curNode = curNode.next;
-            System.out.println(curNode.value);
-        }
-    }
 }
+    
 
 
 
