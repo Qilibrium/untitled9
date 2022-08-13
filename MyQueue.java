@@ -102,11 +102,6 @@ public class MyQueue {
             System.out.println(curNode.value);
         }
     }
-
-    public static void main(String[] args) {
-        MyQueue myQueue = new MyQueue();
-
-    }
 }
 
 
