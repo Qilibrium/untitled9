@@ -56,11 +56,4 @@ public class MyStack {
 
         }
     }
-
-    /////////
-    public void display() {
-        for (Object elem : array) {
-            System.out.print(elem + " ");
-        }
-    }
 }
