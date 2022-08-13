@@ -29,23 +29,7 @@ public class MyHashMap {
     private int getBucket(Object key) {
         return key.hashCode() % SIZE;
     }
-
-    public int size() {
-        return size;
-    }
-
-    public Object get(Object key) {
-        int bucket = getBucket(key);
-        Entry entry = table[bucket];
-        while (entry != null) {
-            if (entry.getKey().equals(key)) {
-                return entry.getValue();
-            }
-            entry = entry.next;
-        }
-        return null;
-    }
-
+    
     public void put(Object key, Object value) {
         if (key == null) {
             throw new IllegalArgumentException("Cannot add null key");
@@ -92,11 +76,28 @@ public class MyHashMap {
         size--;
         return true;
     }
-
+   
     public int clear() {
 
         for (int i = 0; i < table.length; i++)
             table[i] = null;
         return size();
+    }
+
+    public int size() {
+        return size;
+    }
+
+
+    public Object get(Object key) {
+        int bucket = getBucket(key);
+        Entry entry = table[bucket];
+        while (entry != null) {
+            if (entry.getKey().equals(key)) {
+                return entry.getValue();
+            }
+            entry = entry.next;
+        }
+        return null;
     }
 }
