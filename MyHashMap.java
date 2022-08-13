@@ -99,10 +99,4 @@ public class MyHashMap {
             table[i] = null;
         return size();
     }
-
-    public void display() {
-        for (Object elem : table) {
-            System.out.print(elem + " ");
-        }
-    }
 }
