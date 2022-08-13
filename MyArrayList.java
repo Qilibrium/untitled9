@@ -49,9 +49,4 @@ public class MyArrayList {
             System.out.print(elem + " ");
         }
     }
-
-    public static void main(String[] args) {
-        MyArrayList myArrayList = new MyArrayList();
-
-    }
 }
