@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class Users {
 
     private String name;
     private int age;
