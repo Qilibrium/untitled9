@@ -14,11 +14,11 @@ public class CountWords {
     public static void main(String[] args) throws IOException {
 
 
-        Map<String, Long> wordCountMap = lines(Path.of(RELATIVE_PATH)) // прочитал всек строки в файле
-                .flatMap(line -> Arrays.stream(line.trim().split(" "))) // разделил слова на пробелы
-                .map(word -> word.replaceAll("[^a-zA-Z]", "").trim()) // удалил все пробелы
-                .filter(word -> word.length() > 0) // фильтр что длина слова больше чем 1
-                .map(word -> new AbstractMap.SimpleEntry<>(word, 1)) // помещаю во временную переменную
+        Map<String, Long> wordCountMap = lines(Path.of(RELATIVE_PATH))
+                .flatMap(line -> Arrays.stream(line.trim().split(" ")))
+                .map(word -> word.replaceAll("[^a-zA-Z]", "").trim())
+                .filter(word -> word.length() > 0)
+                .map(word -> new AbstractMap.SimpleEntry<>(word, 1))
                 .collect(Collectors.groupingBy(AbstractMap.SimpleEntry::getKey, Collectors.counting()));
         wordCountMap
                 .entrySet()
